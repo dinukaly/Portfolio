@@ -5,45 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DinukaLy - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- header section -->
+    <!-- Header Section -->
     <header class="header">
         <nav class="navbar">
             <a href="#" class="logo">DinukaLy</a>
             <ul class="nav-links">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero-section">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
             <div class="hero-content">
-                <h1>I'm Dinuka , a <br><span>Full Stack Developer</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat placeratenim, vel met Lorem dolor sit amet, consectetur adi.</p>
-                <button class="btn">View my work</button>
+                <h1>I'm Dinuka, a <br><span>Full Stack Developer</span></h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat placerat enim, vel 
+                   met Lorem dolor sit amet, consectetur adi.</p>
+                <a href="#portfolio" class="btn">View my work</a>
             </div>
             <div class="hero-image">
-                <img src="assets/IMG_6706 edit.jpg" alt="Dinuka">
+                <img src="assets/IMG_6706 edit.jpg" alt="Portrait of Dinuka Liyanage, Full Stack Developer">
                 <div class="stats-container">
                     <div class="stat-item">
-                        <span>50 +</span>
+                        <span>50+</span>
                         <p>Projects</p>
                     </div>
                     <div class="divider"></div>
                     <div class="stat-item">
-                        <span>3 years +</span>
-                        <p>Experiences</p>
+                        <span>3 years+</span>
+                        <p>Experience</p>
                     </div>
                     <div class="divider"></div>
                     <div class="stat-item">
-                        <span>100 +</span>
+                        <span>100+</span>
                         <p>Clients</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-head">
+                <p class="section-label">About Me</p>
+                <h2>The Person Behind<br>Every Pixel</h2>
+                <div class="horizontal-line"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="about-image">
+                        <span class="image-accent"></span>
+                        <img src="assets/IMG_6706 edit.jpg" alt="Profile image">
+                        <ul class="socials">
+                            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                             <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat placaret enim, vel met Lorem dolor sit amet, consectetur adipiscing elit. Curabitur feugiat placeratenim, vel met Lorem dolor sit amet, consectetur adi.</p>
+                    <div class="contact-grid">
+                        <div class="contact-item"><i class="fa-regular fa-user"></i><span>Dinuka Liyanage</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Matugama, Sri Lanka</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>+94 78 120 345</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>dinuka@gmail.com</span></div>
+                    </div>
+                    <a href="#" class="btn btn-download"><i class="fa-solid fa-download"></i> Download CV</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+    </footer>
 </body>
 </html>
