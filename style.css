@@ -1,6 +1,6 @@
 
 body {
-    margin: 0;
+    margin: 20px;
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
@@ -349,3 +349,77 @@ main {
     transform: translateY(-2px);
 }
 
+/* Experience section */
+.experience-section {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.experience-head{
+    text-align: left;
+    margin-bottom: 60px;
+}
+#experience-line{
+    margin-left: 0;
+}
+.experience-head h2{
+    font-size: 40px;
+    line-height: 1.2;
+    color: #ffc107;
+    margin: 0 0 30px;
+    font-weight: 600;
+}
+
+.experience-content{
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.education-item{
+    flex: 1;
+    padding: 20px;
+    background-color: #1a1a1a33;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid #ffc107;
+}
+.experience-item{
+    flex: 1;
+    padding: 20px;
+    background-color: #1a1a1a33;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid #ffc107;
+}
+.experience-item h2, .education-item h2{
+    font-size: 24px;
+    line-height: 1.2;
+    color: #ffc107;
+    margin: 0 0 30px;
+    font-weight: 600;
+}
+.experience-item h3, .education-item h3{
+    font-size: 20px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+.icon-one, .icon-two{
+    color: #ffffff;
+    margin-right: 10px;
+    background-color: #e6ac00;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.designation{
+    font-size: 16px;
+    line-height: 1.2;
+    color: #ffffff73;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
