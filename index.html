@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DinukaLy - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,13 @@
     <header class="header">
         <nav class="navbar">
             <a href="#" class="logo">DinukaLy</a>
-            <ul class="nav-links">
+              <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#services">Services</a></li>
@@ -157,28 +163,171 @@
                     
                     <h3> <i class="fa-solid fa-code"></i>App Development</h3>
                     <p>Building responsive and dynamic mobile applications using the latest technologies.</p>
-                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="services-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item">
                     <h3> <i class="fa-solid fa-mobile"></i>Web Development</h3>
                     <p>Creating user-friendly websites and web applications using the latest technologies.</p>
-                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="services-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item">
                     <h3> <i class="fa-solid fa-computer"></i>Deployment & Hosting</h3>
                     <p>Designing and maintaining efficient APIs for your business needs.</p>
-                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="services-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="service-item">
                     <h3> <i class="fa-solid fa-cloud"></i>Cloud Services</h3>
                     <p>Offering cloud solutions to enhance your business scalability and performance.</p>
-                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="services-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
           </section>
+<!-- Recent Work -->
+<section class="recent-work-section" id="portfolio">
+  <div class="recent-work-head">
+    <p class="section-label">My Work</p>
+    <h2>Discover My Recent Work</h2>
+    <div class="horizontal-line" id="recent-work-line"></div>
+  </div>
+
+  <div class="recent-work-content">
+    <div class="work-item">
+      <div class="up-content">
+        <img src="assets/people-having-meeting-office.jpg" alt="Fishermen Safety App">
+        <div class="icon-circle">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+      </div>
+
+      <div class="down-content"></div>
+
+      <div class="overlay-content">
+        <h3>Fishermen Safety App</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipig elit. Vivamus lacinia vitae vestib.</p>
+        <a href="#" class="recent-work-read-more">Read More</a>
+      </div>
+    </div>
+     <div class="work-item">
+      <div class="up-content">
+        <img src="assets/people-having-meeting-office.jpg" alt="Fishermen Safety App">
+        <div class="icon-circle">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+      </div>
+
+      <div class="down-content"></div>
+
+      <div class="overlay-content">
+        <h3>Fishermen Safety App</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipig elit. Vivamus lacinia vitae vestib.</p>
+        <a href="#" class="recent-work-read-more">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+<!-- Contact -->
+        <section class="Contact-section" id="contact">
+            <div class="contact-head">
+                <p class="section-label">Contact Us</p>
+                <h2>Let Us Discuss Your Project</h2>
+                <div class="horizontal-line"></div>
+            </div>
+
+            <div class="contact-card" role="form" aria-labelledby="contact-heading">
+                <form id="contactForm" class="contact-form" action="#" method="post">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text"  required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text"/>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"  required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+<!--        contact us-->
+        
     </main>
 
     <!-- Footer Section -->
     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col about">
+                <h3>Dinuka<span>Ly</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodi suscipit minus similique.</p> <br> <br>
+                <p class="footer-p"> <li class="fa-solid fa-location-dot"></li>Matugama, Sri Lanka</p>
+                <p class="footer-p"> <li class="fa-solid fa-phone"></li>+94 77 230 453</p>
+                <p class="footer-p"> <li class="fa-solid fa-envelope"></li>info@dinuka@gmail.com</p> 
+             </div>
+            <div class="footer-details-heading">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-details-heading">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Mobile App Develop</a></li>
+                    <li><a href="#">Web App Develop</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">API Integration</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-details-heading">
+                <h4>Legal Information</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> @copyright | All rights reserved</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="facebook"></a>
+                <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="twitter"></a>
+                <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="linkedin"></a>
+                <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="github"></a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active'); // animate icon
+        navLinks.classList.toggle('show');     // slide menu
+  });
+    </script>
 </body>
 </html>
