@@ -1,0 +1,24 @@
+
+@import url('base.css');
+
+@import url('layout.css');
+
+
+@import url('components.css');
+
+
+@import url('sections.css');
+
+
+@import url('responsive.css');
+
+/**
+ * Modular CSS Architecture
+ * 
+ * base.css      - CSS variables, reset rules, typography, global styles
+ * layout.css    - Header, navbar, footer, main layout components  
+ * components.css - Reusable UI components (buttons, forms, cards, etc.)
+ * sections.css  - Page section-specific styles (hero, about, services, etc.)
+ * responsive.css - All mobile and responsive design rules
+ * 
+/
