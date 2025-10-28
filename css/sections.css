@@ -179,6 +179,7 @@
 .skills-section {
   width: 100%;
   padding: 40px 0;
+  overflow: hidden;
 }
 
 .skills-head {
@@ -202,15 +203,198 @@
   justify-content: center;
 }
 
-.skill-icons img {
-  width: 60px;
-  height: 60px;
-  margin: 30px;
-  transition: transform 0.3s ease;
+/* Modern Marquee Animation for Skill Icons */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  background: linear-gradient(135deg, 
+    rgba(var(--primary-color-rgb), 0.05) 0%, 
+    rgba(var(--secondary-color-rgb), 0.05) 100%);
+  border-radius: 20px;
+  margin: 20px 0;
 }
 
-.skill-icons img:hover {
-  transform: scale(1.1);
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.skill-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  padding: 20px 15px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: 
+    0 4px 20px var(--shadow-light),
+    0 0 0 1px rgba(var(--primary-color-rgb), 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-icon-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.skill-icon-item:hover::before {
+  left: 100%;
+}
+
+.skill-icon-item:hover {
+  transform: translateY(-12px) scale(1.08);
+  box-shadow: 
+    0 20px 40px rgba(var(--primary-color-rgb), 0.3),
+    0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.skill-icon-item:hover .icon-label {
+  color: white;
+  transform: translateY(2px);
+}
+
+.skill-icon-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.skill-icon-item:hover img {
+  transform: scale(1.3) rotate(10deg);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.icon-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Gradient fade effect on edges */
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+/* Speed variation for visual interest */
+.marquee-track-2 {
+  animation-duration: 40s !important;
+  animation-direction: reverse !important;
+}
+
+.marquee-reverse {
+  margin-top: 20px;
+  background: linear-gradient(135deg, 
+    rgba(var(--secondary-color-rgb), 0.05) 0%, 
+    rgba(var(--primary-color-rgb), 0.05) 100%);
+}
+
+.marquee-reverse .skill-icon-item {
+  background: linear-gradient(135deg, 
+    rgba(var(--secondary-color-rgb), 0.1), 
+    rgba(var(--primary-color-rgb), 0.1));
+}
+
+.marquee-reverse .skill-icon-item:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Floating animation for extra visual appeal */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.skill-icon-item {
+  animation: float 3s ease-in-out infinite;
+}
+
+.skill-icon-item:nth-child(2n) {
+  animation-delay: -1.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-icon-item {
+    min-width: 80px;
+    padding: 12px;
+  }
+  
+  .skill-icon-item img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon-label {
+    font-size: 10px;
+  }
+  
+  .marquee-track {
+    gap: 20px;
+    animation-duration: 25s;
+  }
+  
+  .marquee-container::before,
+  .marquee-container::after {
+    width: 60px;
+  }
 }
 
 /* Services Section */
