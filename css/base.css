@@ -4,6 +4,9 @@
 :root {
   --primary-color: #ffc107;
   --primary-hover: #e6ac00;
+  --primary-color-rgb: 255, 193, 7;
+  --secondary-color: #ff9800;
+  --secondary-color-rgb: 255, 152, 0;
   --bg-dark: #1a1a1a;
   --bg-darker: #0a0a0a;
   --bg-card: #1a1a1a33;
@@ -30,7 +33,10 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   background-color: var(--bg-dark);
   color: var(--text-primary);
   overflow-x: hidden;
