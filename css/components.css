@@ -320,7 +320,7 @@
   top: 60px;
   left: 40px;
   width: 68%;
-  height: calc(60%);
+  /* height: calc(60%); */ /* Removed fixed height */
   background: var(--primary-hover);
   padding: 20px;
   color: var(--text-primary);
