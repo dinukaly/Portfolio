@@ -210,16 +210,19 @@
   .services-content {
     flex-direction: column;
     align-items: center;
-    gap: 30px; 
+    gap: 25px; 
     width: 100%;
+    padding: 0 20px;
   }
 
   .service-item {
-    flex: 0 0 100%;
+    flex: 1 1 auto;
     width: 100%;
     max-width: 400px;
     margin: 0 auto; 
     text-align: center; 
+    min-height: 200px;
+    padding: 20px;
   }
 
   /* Skills Section Mobile */
@@ -324,11 +327,14 @@
   }
 
   .services-content {
-    gap: 15px;
+    gap: 20px;
+    padding: 0 15px;
   }
 
   .service-item {
-    flex: 0 0 calc(50% - 15px);
+    flex: 1 1 300px;
+    min-height: 220px;
+    padding: 20px;
   }
 
   .hero-content {
@@ -471,11 +477,13 @@
   }
 
   .services-content {
-    gap: 30px;
+    gap: 25px;
+    padding: 0 20px;
   }
 
   .service-item {
-    flex: 0 0 calc(25% - 23px);
+    flex: 1 1 280px;
+    min-height: 240px;
   }
 
   .recent-work-content {
