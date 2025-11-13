@@ -205,13 +205,17 @@
 
 /* Service Item Components */
 .service-item {
-  flex: 0 0 30%;
-  height: 250px;
-  padding: 20px;
+  flex: 1 1 280px;
+  min-height: 250px;
+  padding: 25px;
   background-color: var(--bg-card);
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 10px 30px var(--shadow-light);
   transition: var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .service-item:hover {
@@ -224,8 +228,9 @@
   font-size: 24px;
   line-height: 1.2;
   color: var(--text-primary);
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   font-weight: 600;
+  word-wrap: break-word;
 }
 
 .service-item h3 i {
@@ -242,13 +247,14 @@
 }
 
 .service-item a {
-  margin-top: 20px;
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
   color: var(--primary-color);
   transition: var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .service-item a:hover {
