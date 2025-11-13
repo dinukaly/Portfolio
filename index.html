@@ -413,7 +413,7 @@
             </div>
 
             <div class="contact-card" role="form" aria-labelledby="contact-heading">
-                <form id="contactForm" class="contact-form" action="#" method="post">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xqawagry" method="post">
                     <div class="form-row">
                         <label for="name">Name</label>
                         <input id="name" name="name" type="text"  required />
@@ -435,7 +435,7 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button id="my-form-button" class="btn btn-primary">Send</button>
                     </div>
                 </form>
             </div>
@@ -512,6 +512,38 @@
                 navLinks.classList.remove('show');
             })
         })
+
+        // <!-- Place this script at the end of the body tag -->
+  var form = document.getElementById("contactForm");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
     </script>
 </body>
 </html>
