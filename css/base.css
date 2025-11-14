@@ -55,7 +55,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 30%, transparent 70%);
+  /* background: radial-gradient(circle at center, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 30%, transparent 70%); */
   pointer-events: none;
   z-index: -1;
 }
