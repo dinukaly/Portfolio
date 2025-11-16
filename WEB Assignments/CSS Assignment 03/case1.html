@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case 1 Updated</title>
+  <style>
+    .section {
+      width: 50vw;
+      height: 50vh;
+      position: absolute;
+    }
+
+    
+    .top-left { background-color: #FE0000; left: 0; top: 0; }   
+    .top-right { background-color: #018000; right: 0; top: 0; } 
+    .bottom-left { background-color: #FFA500; left: 0; bottom: 0; }
+    .bottom-right { background-color: #FE1495; right: 0; bottom: 0; } 
+
+   
+    .corner-arc {
+      position: absolute;
+      width: 7rem;
+      height: 7rem;
+      background-color: white;
+    }
+
+    .arc-top-left { border-radius: 0 0 100px 0; top: 0; left: 0; }
+    .arc-top-right { border-radius: 0 0 0 100px; top: 0; right: 0; }
+    .arc-bottom-left { border-radius: 0 100px 0 0; bottom: 0; left: 0; }
+    .arc-bottom-right { border-radius: 100px 0 0 0; bottom: 0; right: 0; }
+
+  
+    .circle-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .large-circle {
+      width: 15rem;
+      height: 15rem;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+    }
+
+   
+    .inner-square {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+    }
+
+   
+    .mid-arc {
+      position: absolute;
+      width: 8rem;
+      height: 4rem;
+      background-color: white;
+      left: 0; right: 0;
+      margin: auto;
+    }
+
+    .mid-top { border-radius: 0 0 200px 200px; top: 0; }
+    .mid-bottom { border-radius: 200px 200px 0 0; bottom: 0; }
+
+
+    .center-square {
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+    }
+
+    
+    .center-circle {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="section top-left">
+    <div class="corner-arc arc-top-left"></div>
+    <div class="circle-container">
+      <div class="large-circle">
+        <div class="inner-square"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section top-right">
+    <div class="corner-arc arc-top-right"></div>
+    <div class="circle-container">
+      <div class="large-circle">
+        <div class="inner-square"></div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="section bottom-left">
+    <div class="corner-arc arc-bottom-left"></div>
+    <div class="circle-container">
+      <div class="large-circle">
+        <div class="inner-square"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section bottom-right">
+    <div class="corner-arc arc-bottom-right"></div>
+    <div class="circle-container">
+      <div class="large-circle">
+        <div class="inner-square"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mid-arc mid-top"></div>
+  <div class="mid-arc mid-bottom"></div>
+
+
+  <div class="center-square">
+    <div class="center-circle"></div>
+  </div>
+</body>
+</html>
